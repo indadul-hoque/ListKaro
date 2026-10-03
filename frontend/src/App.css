@@ -14,3 +14,37 @@
 body{
     background-color: #0b1426;
 }
+
+
+/* Toast Container */
+.toast-container {
+  position: fixed;
+  top: 0px;
+  right: 5px;
+  z-index: 9999;
+}
+
+/* Entire Toast Card */
+.toast {
+  display: flex;
+  align-items: center;
+  min-width: 250px;
+  padding: 12px 20px;
+  background-color: #333;
+  color: #fff;
+  border-radius: 6px;
+  
+  /* Slide in the WHOLE toast card from the right */
+  animation: slideInRight 0.3s ease-out forwards;
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}

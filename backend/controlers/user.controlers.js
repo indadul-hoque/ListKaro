@@ -82,7 +82,7 @@ export const login = async (req, res) => {
 
   const { email, password } = req.body;
   try {
-    const user = await User.findOne({ email });
+    const user = req.userFromDB || (await User.findOne({ email }));
     // and check if the user exists in the database
     if (!user) {
       return res.status(400).json({
@@ -126,7 +126,11 @@ export const login = async (req, res) => {
       },
     });
   } catch (error) {
-    console.log("error in login", error);
+    console.error("error in login:", error);
+    return res.status(500).json({
+      success: false,
+      message: error.message || "Internal server error",
+    });
   }
 };
 
@@ -141,7 +145,13 @@ export const logout = async (req, res) => {
       success: true,
       message: "Logged out successfully",
     });
-  } catch (error) {}
+  } catch (error) {
+    console.error("error in logout:", error);
+    return res.status(500).json({
+      success: false,
+      message: error.message || "Internal server error",
+    });
+  }
 };
 
 // Email Varification Controller

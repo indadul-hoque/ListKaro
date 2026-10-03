@@ -118,13 +118,15 @@ function AppContent() {
         </Suspense>
 
         <Toaster
-          position="top-center"
-          reverseOrder={false}
+          position="top-right"
+          reverseOrder={true}
           toastOptions={{
-            className: "dark:bg-gray-800 dark:text-white",
+            className: "bg-gray-800 text-white toast-container toast",
             style: {
-              borderRadius: "10px",
-              padding: "16px",
+              borderRadius: "6px",
+              padding: "8px",
+              background: "#607448ff",
+              color: "#ffffff",
             },
           }}
         />
