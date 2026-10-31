@@ -10,8 +10,8 @@ import {
   ShieldCheck,
   ShoppingBag,
 } from "lucide-react";
-import Input from "../../components/Input";
-import PasswordStrengthMeter from "../../components/PasswordStrengthMeter";
+import Input from "../../components/Common/Input";
+import PasswordStrengthMeter from "../../components/Common/PasswordStrengthMeter";
 import toast from "react-hot-toast";
 import { useAuthStore } from "../../store/authStore";
 

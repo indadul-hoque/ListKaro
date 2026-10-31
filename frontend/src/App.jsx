@@ -13,12 +13,12 @@ import useAutoLogout from "./store/useAutoLogout";
 import { useAuthStore } from "./store/authStore";
 
 // Static imports for core layout
-import Navbar from "./pages/Common/Navbar";
+import Navbar from "./components/Common/Navbar";
 
 // Lazy-loaded components for performance optimization
 const Home = React.lazy(() => import("./pages/Home/Home"));
 const UpList = React.lazy(() => import("./pages/ListUpload/UpList"));
-const Profile = React.lazy(() => import("./pages/Common/Profile"));
+const Profile = React.lazy(() => import("./pages/AboutUs/Profile"));
 const About = React.lazy(() => import("./pages/AboutUs/About"));
 
 const FAQ = React.lazy(() => import("./pages/FAQ/FAQ"));

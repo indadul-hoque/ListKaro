@@ -10,7 +10,7 @@ import {
   ShoppingBag,
 } from "lucide-react";
 import toast from "react-hot-toast";
-import Input from "../../components/Input";
+import Input from "../../components/Common/Input";
 
 const LoginPage = () => {
   const [email, setEmail] = useState("");
